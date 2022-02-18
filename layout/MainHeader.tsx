@@ -14,7 +14,7 @@ const MainHeader: React.FC<props> = (props) => {
 
   return (
     <header className={classes.header}>
-      <nav className={classes.nav}>Brand</nav>
+      <nav className={classes.nav}> <Link href={'/'}>Brand</Link> </nav>
       <ul className={classes.elements}>
         {navElementName.map((nvE, ind) => (
           <Fragment key={ind}>

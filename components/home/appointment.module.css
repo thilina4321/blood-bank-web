@@ -1,0 +1,48 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.submit__button {
+  align-self: flex-end;
+  margin: 0.7rem;
+  margin: 1rem 0;
+}
+
+.contact{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.contact__details{
+    flex: 1;
+    min-width: 200px;
+    text-align: start;
+
+}
+
+.contact__form{
+    flex: 1;
+
+}
+
+
+@media (max-width:500px){
+    .submit__button{
+        width: 100%;
+        flex: 1;
+    }
+}

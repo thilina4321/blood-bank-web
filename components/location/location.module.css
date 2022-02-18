@@ -1,0 +1,32 @@
+.section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.map__view {
+  height: 300px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.map__btn {
+  width: 60%;
+  align-self: flex-end;
+}
+
+@media (max-width: 700px) {
+  .map__btn {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,21 @@
+.banks{
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    margin: auto;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.bank{
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.bank:hover{
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+

@@ -1,0 +1,22 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+
+}
+
+.input {
+  width: 100%;
+  height: 2rem;
+  padding: 0.4rem;
+  border-radius: .2rem;
+  margin-bottom: 0.3rem;
+}
+
+.input:focus{
+  border: none;
+  text-decoration: none;
+  
+}

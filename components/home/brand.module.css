@@ -1,0 +1,29 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.name {
+  width: 80%;
+  margin: auto;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  width: 60%;
+  margin: auto;
+}
+
+@media (max-width: 500px) {
+  .btn {
+    width: 94%;
+  }
+}
