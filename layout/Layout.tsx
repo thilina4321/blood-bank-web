@@ -4,14 +4,8 @@ import classes from "./main.module.css";
 import Slider from "./MobileHeader";
 import { useRouter } from "next/router";
 import Footer from "./Footer";
-
+import { navElementName } from "./routes";
 const Layout: React.FC = ({ children }) => {
-  const navElementName = [
-    { name: "Home", path: "/" },
-    { name: "Docs", path: "/project" },
-    { name: "Banks", path: "/banks" },
-    { name: "Analysis", path: "/" },
-  ];
   const router = useRouter();
 
   return (
