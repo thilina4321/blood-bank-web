@@ -67,7 +67,8 @@
 /* hover_menu_code */
 .menu_items {
   display: none;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   padding: 2rem;
   position: fixed;
   top: 80px;
@@ -79,6 +80,7 @@
   gap: 1rem;
   cursor: pointer;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  min-height: 10rem;
 }
 
 .hover_items {

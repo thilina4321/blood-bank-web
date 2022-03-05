@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0;
+}
+
+.container h1{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 3.5rem;
+    color: #eee;
+}
+
+.list__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.list__item{
+    border: 1px solid #eee;
+    padding: 1rem;
+    flex: 1;
+    width: 100%;
+    border-radius: 0.5rem;
+
+}
+
+.list__item:hover{
+    transform: scale(1.02);
+}
+
+.list__item h3{
+    margin-bottom: 0;
+}
+
+.list__item h4{
+    margin: 0;
+    color: rgb(151, 150, 150);
+}
+
+.list__item p strong {
+    font-size: 1.5rem;
+    color: rgb(151, 150, 150);
+
+}

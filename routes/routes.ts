@@ -8,7 +8,11 @@ export const navElementName = [
       { subName: "Purpose", subPath: "/about/what-we-do" },
     ],
   },
-  { name: "About", path: "/about", subElement: [] },
+  {
+    name: "About",
+    path: "/about",
+    subElement: [{ subName: "Doctor Notes", subPath: "/about/doctors-notes" }],
+  },
   { name: "Banks", path: "/banks", subElement: [] },
   { name: "Analysis", path: "/", subElement: [] },
 ];
