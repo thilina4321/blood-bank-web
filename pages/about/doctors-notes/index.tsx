@@ -17,13 +17,11 @@ const DoctorsNotes = () => {
   ];
   return (
     <div className="container">
-      <h1> Doctor's Notes </h1>
+      <h1> {`Doctor's Notes`} </h1>
       <div className="list__items">
         {notes.map(({ note, name, id, position }) => (
           <div className="list__item" key={id}>
-            <p>
-              <strong> " </strong> {note} <strong> " </strong>
-            </p>
+            <p>{`" ${note} " `}</p>
             <h3> {name} </h3>
             <h4> {position} </h4>
           </div>
