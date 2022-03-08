@@ -13,8 +13,9 @@ const PlateCapability = () => {
     <Fragment>
       <table className={classes.table}>
         <tr>
-          <th>Patients blood group</th>
-          <th>Donor blood group</th>
+          <th>Patients group</th>
+          <th>Compatible plasma donor
+</th>
         </tr>
         {tableData.map(({ donarBlood, patientBlood }, i) => (
           <tr key={i}>
