@@ -6,7 +6,6 @@ import classes from "./title.module.css";
 const Title = () => {
     const router = useRouter()
     const routes = router.pathname.replace('/', '').split('/')
-    console.log(routes);
     
     
   return (
