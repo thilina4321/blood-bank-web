@@ -1,0 +1,31 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.descriptions{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: max-content;
+    
+}
+
+.description{
+    flex: 1;
+    gap: 1rem;
+    line-height: 2rem;
+    background-color: #f6f6f6;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+@media (max-width:800px){
+    .descriptions{
+        flex-direction: column;
+    }
+}
