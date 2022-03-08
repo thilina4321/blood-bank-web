@@ -13,6 +13,10 @@ export const navElementName = [
     path: "/about",
     subElement: [{ subName: "Doctor Notes", subPath: "/about/doctors-notes" }],
   },
-  { name: "Banks", path: "/banks", subElement: [] },
+  {
+    name: "Banks",
+    path: "/banks",
+    subElement: [{ subName: "Blood Groups", subPath: "/banks/groups" }],
+  },
   { name: "Analysis", path: "/", subElement: [] },
 ];
