@@ -1,0 +1,49 @@
+.section {
+    margin-top: 7rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+    background-color: #f6f6f6;
+    padding: 3rem;
+  }
+  
+  .title {
+    color: #5e0023;
+    font-family: Fela Bold;
+    font-weight: bold;
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .descriptions {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 2rem;
+  
+  }
+  
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .description p{
+      margin: 0;
+      line-height: 2rem;
+  }
+  
+  
+  
+  @media (max-width:500px){
+      .section{
+          width: 96%;
+      }
+  }

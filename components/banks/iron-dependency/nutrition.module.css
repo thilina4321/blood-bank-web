@@ -1,0 +1,34 @@
+.section {
+  margin: 5rem 0;
+  font-family: Fela Bold,sans-serif;
+}
+.section h1 {
+  color: #5e0023;
+  font-family: Fela Bold;
+  font-weight: bold;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.section h2{
+    margin-top: 4rem;
+    color: #5e0023;
+
+}
+
+.section p {
+    line-height: 2rem;
+}
+
+
+.rich__food{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rich__food ul li{
+    line-height: 2rem;
+}

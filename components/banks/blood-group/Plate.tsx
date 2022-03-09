@@ -12,17 +12,18 @@ const PlateCapability = () => {
   const table = (
     <Fragment>
       <table className={classes.table}>
-        <tr>
-          <th>Patients group</th>
-          <th>Compatible plasma donor
-</th>
-        </tr>
-        {tableData.map(({ donarBlood, patientBlood }, i) => (
-          <tr key={i}>
-            <td> {patientBlood} </td>
-            <td>{donarBlood}</td>
+        <tbody>
+          <tr>
+            <th>Patients group</th>
+            <th>Compatible plasma donor</th>
           </tr>
-        ))}
+          {tableData.map(({ donarBlood, patientBlood }, i) => (
+            <tr key={i}>
+              <td> {patientBlood} </td>
+              <td>{donarBlood}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </Fragment>
   );
