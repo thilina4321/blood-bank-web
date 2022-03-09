@@ -33,7 +33,7 @@ const IronAbsorption = () => {
       <div className={classes.notes}>
         <h1> Ways to boost your iron absorption</h1>
         {notes.map((note) => (
-          <div className={classes.note}>
+          <div key={note.id} className={classes.note}>
             <h1> {note.id} </h1>
             <p> {note.note} </p>
           </div>

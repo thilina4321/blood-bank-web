@@ -4,6 +4,9 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    background-color: #f6f6f6;
+    padding: 3rem;
+
 }
 
 .section h1{
@@ -49,5 +52,6 @@
 @media (max-width:500px){
     .section{
         flex-direction: column;
+        padding: 1rem;
     }
 }
