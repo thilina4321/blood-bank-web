@@ -1,0 +1,25 @@
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    margin: auto;
+}
+
+.h1{
+    color: #5e0023;
+    font-size: 3rem;
+
+}
+
+.items{
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
