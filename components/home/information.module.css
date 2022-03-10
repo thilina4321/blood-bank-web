@@ -1,0 +1,19 @@
+
+
+.informations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #F6F6F6;
+  margin: 5rem 0;
+  padding: 5rem 2rem;
+
+}
+
+.information {
+  background: #eee;
+  height: 12rem;
+  overflow: hidden;
+}

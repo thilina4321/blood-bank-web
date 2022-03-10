@@ -8,9 +8,9 @@ const Brand = () => {
         <h1>Sri Lanka Blood Bank Authority</h1>
       </div>
       <p>Your valuable donations will save hundreds of lifes.</p>
-      <div className={classes.btn}>
+      {/* <div className={classes.btn}>
         <MyButton name="Donate Blood" />
-      </div>
+      </div> */}
     </section>
   );
 };
