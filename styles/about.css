@@ -7,10 +7,20 @@
     margin: 0;
 }
 
+.container p {
+    line-height: 2rem;
+}
+
+.container img{
+    height: 50vh;
+    width: 100%;
+}
+
 .container h1{
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow:  2px 2px 8px #5E0023;
     font-size: 3.5rem;
     color: #eee;
+    
 }
 
 .list__items{

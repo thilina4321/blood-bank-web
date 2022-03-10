@@ -1,0 +1,54 @@
+.programs{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 95%;
+    margin: 5rem auto;
+
+
+}
+
+.program{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #A3152D;
+    color: #fff;
+    padding: 2rem;
+    width: 30%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.program h1, .program p{
+    margin: 0;
+}
+
+.program h1{
+    margin-bottom: 1rem;
+}
+
+.program button{
+    background-color: #A3152D;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+    margin: 1rem auto ;
+    border: 1px solid #fff;
+    
+}
+
+.program button:hover{
+    box-shadow: inset 0 0 10px #fff;
+    cursor: pointer;
+}
+
+@media (max-width:800px){
+    .program{
+        width: 100%;
+    }
+}

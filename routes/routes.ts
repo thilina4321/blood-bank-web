@@ -14,6 +14,7 @@ export const navElementName = [
     subElement: [
       { subName: "Doctor Notes", subPath: "/about/doctors-notes" },
       { subName: "Our Research", subPath: "/about/research" },
+      { subName: "Our Programs", subPath: "/about/our-programs" },
     ],
   },
   {

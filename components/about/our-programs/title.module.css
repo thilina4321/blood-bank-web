@@ -1,0 +1,11 @@
+.section{
+    height: 80vh;
+    padding: 2rem;
+    background-image: url('/research.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    right: 5rem;
+    color: #fff;
+
+}

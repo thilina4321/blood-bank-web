@@ -1,5 +1,4 @@
-import Image from "next/image";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import classes from "./trending.module.css";
 
 const researches = [
@@ -14,7 +13,7 @@ const researches = [
 ];
 
 const TrendingResearch = () => {
-  const [selectNumber, setSelectNumber] = useState(1);
+  const [selectNumber, setSelectNumber] = useState(0);
 
   return (
     <section className={classes.section}>
@@ -24,7 +23,7 @@ const TrendingResearch = () => {
           <div
             key={id}
             className={classes.research}
-            onClick={() => setSelectNumber(id)}
+            onClick={() => id === selectNumber ? setSelectNumber(0) : setSelectNumber(id)}
           >
             {selectNumber === id ? (
               <div className={classes.sub__research__full}>
