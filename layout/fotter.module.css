@@ -2,26 +2,28 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 95%;
-  margin: auto;
+  width: 100%;
   flex-wrap: wrap;
   border-top: 2px solid #eaeaea;
+  background-color: #a3152d;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  padding: 2rem;
 }
 
-.general, .more {
+.general,
+.more {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   min-width: 300px;
   align-items: flex-start;
-
 }
 
-
-
-.general p, .more p{
-    margin: 0;
+.general p,
+.more p {
+  margin: 0;
 }
-

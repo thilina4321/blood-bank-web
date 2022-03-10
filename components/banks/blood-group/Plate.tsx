@@ -40,7 +40,7 @@ Group AB recipients can only receive group AB plasma. Group O recipients don’t
         <Image src="/git.png" height={100} width={100} alt={"title"} />
       </div>
       <div className={classes.table__section}>
-        <h3>Safe blood types for each patient blood group:</h3>
+        <h3 style={{color:'#e42312'}}>Safe plasma types for each patient plasma group:</h3>
         {table}
       </div>
     </section>

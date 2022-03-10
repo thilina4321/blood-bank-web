@@ -12,16 +12,18 @@ const Capability = () => {
   const table = (
     <Fragment>
       <table className={classes.table}>
-        <tr>
-          <th>Patients blood group</th>
-          <th>Donor blood group</th>
-        </tr>
-        {tableData.map(({ donarBlood, patientBlood }, i) => (
-          <tr key={i}>
-            <td> {patientBlood} </td>
-            <td>{donarBlood}</td>
+        <tbody>
+          <tr>
+            <th>Patients blood group</th>
+            <th>Donor blood group</th>
           </tr>
-        ))}
+          {tableData.map(({ donarBlood, patientBlood }, i) => (
+            <tr key={i}>
+              <td> {patientBlood} </td>
+              <td>{donarBlood}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </Fragment>
   );
@@ -29,7 +31,7 @@ const Capability = () => {
   return (
     <section className={classes.section}>
       <div className={classes.description}>
-        <h1 style={{color:'#e42312'}}> 1.  Red cell compatibility</h1>
+        <h1 style={{ color: "#e42312" }}> 1. Red cell compatibility</h1>
         <p>
           {` Because of the reasons above, it’s best that patients receive red cell
         components of identical ABO group and RhD type in their transfusions.
@@ -41,7 +43,7 @@ const Capability = () => {
         <Image src="/git.png" height={100} width={100} alt={"title"} />
       </div>
       <div className={classes.table__section}>
-        <h3>Safe blood types for each patient blood group:</h3>
+        <h3 style={{color:'#e42312'}}>Safe blood types for each patient blood group:</h3>
         {table}
       </div>
     </section>
