@@ -5,6 +5,7 @@ import Brand from "../components/home/Brand";
 import HomeFaq from "../components/home/Faq";
 import HomeInformation from "../components/home/Information";
 import Locations from "../components/home/Locations";
+import HomeYouMayLike from "../components/home/YouMayLike";
 
 const details: { title: string; shortDescription: string }[] = [
   { title: "Title 1", shortDescription: "This is the des 1" },
@@ -31,6 +32,7 @@ export default function Home() {
       {/* <BloodDetails bloodDetails={details} /> */}
       <HomeInformation />
       <HomeFaq />
+      <HomeYouMayLike />
       <Appointment />
       <Locations locations={locations} />
     </div>

@@ -9,16 +9,18 @@
 }
 
 .questions {
-    margin-top: 4rem;
+  margin-top: 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 2rem;
-  border-bottom: 1px solid #5e0023;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .question {
   color: #5e0023;
   width: 40%;
+  border-bottom: 1px solid #5e0023;
+  padding-bottom: 1rem;
 }

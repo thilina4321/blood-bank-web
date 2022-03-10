@@ -2,9 +2,19 @@ import React from "react";
 import classes from "./faq.module.css";
 
 const questions = [
-  { id: 1, question: "Question 1" },
+  {
+    id: 1,
+    question:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse nobis repudiandae, doloribus vitae delectus perferendis cumque in? Tempore ipsam, harum delectus, saepe est dolor dolorum quo nam reprehenderit ex consequatur.",
+  },
   { id: 2, question: "Question 1" },
   { id: 3, question: "Question 1" },
+  { id: 4, question: "Question 1" },
+  { id: 4, question: "Question 1" },
+  { id: 4, question: "Question 1" },
+  { id: 4, question: "Question 1" },
+  { id: 4, question: "Question 1" },
+  { id: 4, question: "Question 1" },
   { id: 4, question: "Question 1" },
 ];
 
