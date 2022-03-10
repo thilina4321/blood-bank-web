@@ -6,23 +6,30 @@ type Props = {
   image: string;
   title: string;
   description: string;
-  width: number;
+  width?: number;
+  bgColor?: boolean;
 };
 
 const CardUIComponent: React.FC<Props> = (props) => {
-  const { image, title, description, width } = props;
+  const { image, title, description, bgColor } = props;
+
+  let style = bgColor
+    ? { backgroundColor: "#FFFFFF", height:'30rem' }
+    : { border: "2px solid #a3152d" };
 
   return (
-    <section className={classes.section}>
-      <Image
+    <section className={classes.section} style={style}>
+      <img
         className={classes.image}
         src={image}
         alt={title}
         width={200}
-        height={200}
+        height={250}
       />
-      <h1> {title} </h1>
-      <p> {description} </p>
+      <div style={{ padding: "1rem" }}>
+        <h1> {title} </h1>
+        <p> {description} </p>
+      </div>
     </section>
   );
 };

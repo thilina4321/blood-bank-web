@@ -1,0 +1,24 @@
+.section {
+  padding: 2rem;
+}
+
+.section h1 {
+  color: #5e0023;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.questions {
+    margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid #5e0023;
+  width: 100%;
+}
+
+.question {
+  color: #5e0023;
+  width: 40%;
+}

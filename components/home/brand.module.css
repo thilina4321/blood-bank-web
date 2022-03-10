@@ -37,5 +37,10 @@
 .name h1, .section p{
   background-color: rgba(0, 0, 0, 0.2);
   padding: 2rem;
+  color: #A2152D;
 
+}
+
+.section p {
+  color: #eee;
 }

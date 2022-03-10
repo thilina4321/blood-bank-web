@@ -2,6 +2,8 @@ import Head from "next/head";
 import Appointment from "../components/home/Appointment";
 import BloodDetails from "../components/home/BloodDetails";
 import Brand from "../components/home/Brand";
+import HomeFaq from "../components/home/Faq";
+import HomeInformation from "../components/home/Information";
 import Locations from "../components/home/Locations";
 
 const details: { title: string; shortDescription: string }[] = [
@@ -19,13 +21,16 @@ const locations: { district: string; province: string; city: string }[] = [
 ];
 
 export default function Home() {
+
   return (
     <div>
       <Head>
         <title> SL Blood Bank </title>
       </Head>
       <Brand />
-      <BloodDetails bloodDetails={details} />
+      {/* <BloodDetails bloodDetails={details} /> */}
+      <HomeInformation />
+      <HomeFaq />
       <Appointment />
       <Locations locations={locations} />
     </div>
