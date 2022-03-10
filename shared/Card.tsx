@@ -13,7 +13,7 @@ const CardUIComponent: React.FC<Props> = (props) => {
   const { image, title, description, width } = props;
 
   return (
-    <section className={classes.section} style={{ width: `${width}%` }}>
+    <section className={classes.section}>
       <Image
         className={classes.image}
         src={image}
