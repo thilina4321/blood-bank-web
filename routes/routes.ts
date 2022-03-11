@@ -26,5 +26,5 @@ export const navElementName = [
       { subName: "Iron deficiency", subPath: "/banks/iron-dependency" },
     ],
   },
-  { name: "Analysis", path: "/", subElement: [] },
+  { name: "Contact", path: "/contact", subElement: [] },
 ];

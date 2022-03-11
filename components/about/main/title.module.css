@@ -1,0 +1,42 @@
+.section {
+    height: 80vh;
+    padding: 2rem;
+    background-image: url("/research.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    right: 5rem;
+    color: #fff;
+  }
+  
+  .card {
+    background-color: #fff;
+    width: 30%;
+    padding: 1rem 2rem;
+  }
+  
+  .card h1 {
+    color: #5e0023;
+  }
+  
+  .card p {
+    color: #000;
+    margin: 0;
+    line-height: 1.7rem;
+  }
+  
+  .card button {
+    background-color: #a3152d;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+    border: 1px solid #fff;
+  }
+  
+  .card button:hover {
+    box-shadow: inset 0 0 10px #fff;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,42 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+    margin: 1rem 0;
+  
+  }
+  
+  .section h1, .section li {
+    color: #5f2300;
+    font-size: 3rem;
+  }
+  
+  .section ul{
+      text-align: start;
+  }
+
+  .section li{
+      text-align: start;
+      font-size: 1rem;
+      margin: 0.3rem;
+  }
+  
+  .section li:hover{
+      border-bottom: 1px solid #5f2300;
+      cursor: pointer;
+  }
+  
+  @media (max-width:500px){
+      .section h1{
+          font-size: 2rem;
+          margin: 0.5rem 0;
+      }
+      .section {
+        padding: 1rem;
+        align-items: flex-start;
+
+    }
+  }
