@@ -1,11 +1,12 @@
 export const navElementName = [
   {
-    name: "Home",
+    name: "Blood",
     path: "/",
     subElement: [
-      { subName: "Purpose", subPath: "/about/purpose" },
-      { subName: "Sustainability", subPath: "/about/sustainability" },
-      { subName: "Purpose", subPath: "/about/what-we-do" },
+      { subName: "Eligibility", subPath: "/blood/eligibility" },
+      { subName: "Learn About Blood", subPath: "/blood/learn-about-blood" },
+      { subName: "Donate Blood", subPath: "/blood/donate-blood" },
+      { subName: "Find Blood Center", subPath: "/blood/find-blood-center" },
     ],
   },
   {
