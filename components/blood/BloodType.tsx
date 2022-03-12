@@ -1,17 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { BloodEligibilityBloodTypeProps } from "../../component-type/blood";
 import MyButton from "../../shared/MyButton";
 import classes from "./blood.module.css";
 
-type props = {
-  title: string;
-  description: string;
-  summeryData: { type: string; amount: number }[];
-  status:boolean
-};
-
-const BloodType: React.FC<props> = (props) => {
+const BloodType: React.FC<BloodEligibilityBloodTypeProps> = (props) => {
   const { title, summeryData, description, status } = props;
-  
 
   return (
     <section className="section">

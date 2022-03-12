@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { BankIronDependencyNote } from "../../../component-type/bank";
 import classes from "./ironabsorption.module.css";
 
-type notes = {
-  id: number;
-  note: string;
-};
-const myNotes: notes[] = [
+const myNotes: BankIronDependencyNote[] = [
   {
     id: 1,
     note: `Mix lean beef and leafy green vegetables in your stir fry.`,
@@ -18,8 +15,9 @@ const myNotes: notes[] = [
   },
   { id: 3, note: `Drink tea and coffee between meals, not with meals.` },
 ];
+
 const IronAbsorption = () => {
-  const [notes, setNotes] = useState<notes[]>([]);
+  const [notes, setNotes] = useState<BankIronDependencyNote[]>([]);
 
   useEffect(() => {
     setNotes(myNotes);

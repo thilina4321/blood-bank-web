@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { AboutResearchCard } from "../../../component-type/about";
 import CardUIComponent from "../../../shared/Card";
 import classes from "./wedo.module.css";
 
-type card = {
-  width: number;
-  title: string;
-  image: string;
-  description: string;
-};
-
-const cards: card[] = [
+const cards: AboutResearchCard[] = [
   {
     width: 30,
     title: "Title 1",
@@ -37,7 +31,7 @@ const cards: card[] = [
 ];
 
 const ResearchWhatWedo = () => {
-  const [weDoItems, setWeDoItems] = useState<card[]>([]);
+  const [weDoItems, setWeDoItems] = useState<AboutResearchCard[]>([]);
 
   useEffect(() => {
     setWeDoItems(cards);

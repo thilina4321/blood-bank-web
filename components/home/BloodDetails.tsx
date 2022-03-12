@@ -1,12 +1,11 @@
 import Link from "next/link";
 import React from "react";
+import { HomeBloodDetailsProps } from "../../component-type/home";
 import classes from "./blood_details.module.css";
 
-type props = {
-  bloodDetails: { title: string; shortDescription: string }[];
-};
-const BloodDetails: React.FC<props> = (props) => {
+const BloodDetails: React.FC<HomeBloodDetailsProps> = (props) => {
   const { bloodDetails } = props;
+
   return (
     <section className={classes.main}>
       <h1 className={classes.h1}> Blood Details </h1>

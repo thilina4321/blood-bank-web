@@ -1,18 +1,18 @@
 import Link from "next/link";
 import React from "react";
+import { HomeLocationProps } from "../../component-type/home";
 import MyButton from "../../shared/MyButton";
 import classes from "./location.module.css";
 
-type props = {
-  locations: { district: string; province: string; city: string }[];
-};
-const Locations: React.FC<props> = (props) => {
+const Locations: React.FC<HomeLocationProps> = (props) => {
+
   const { locations } = props;
   const locationsFilters = [
     { label: "Province", values: ["Provice", "District", "City"] },
     { label: "District", values: ["Provice", "District", "City"] },
     { label: "City", values: ["Provice", "District", "City"] },
   ];
+  
   return (
     <div className={classes.section}>
       <h1> Locations </h1>
