@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { HomeLocationProps } from "../../component-type/home";
+import { HomeLocationProps } from "../../component-interfaces/home";
 import MyButton from "../../shared/MyButton";
 import classes from "./location.module.css";
 

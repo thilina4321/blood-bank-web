@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   AboutMainLocationProps,
   AboutMainLocation,
-} from "../../../component-type/about";
+} from "../../../component-interfaces/about";
 import classes from "./ourlocations.module.css";
 
 const locations: AboutMainLocation[] = [

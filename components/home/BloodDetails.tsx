@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { HomeBloodDetailsProps } from "../../component-type/home";
+import { HomeBloodDetailsProps } from "../../component-interfaces/home";
 import classes from "./blood_details.module.css";
 
 const BloodDetails: React.FC<HomeBloodDetailsProps> = (props) => {

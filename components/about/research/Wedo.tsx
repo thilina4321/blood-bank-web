@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AboutResearchCard } from "../../../component-type/about";
+import { AboutResearchCard } from "../../../component-interfaces/about";
 import CardUIComponent from "../../../shared/Card";
 import classes from "./wedo.module.css";
 

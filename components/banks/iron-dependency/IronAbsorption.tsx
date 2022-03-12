@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { BankIronDependencyNote } from "../../../component-type/bank";
+import { BankIronDependencyNote } from "../../../component-interfaces/bank";
 import classes from "./ironabsorption.module.css";
 
 const myNotes: BankIronDependencyNote[] = [

@@ -1,5 +1,5 @@
 import React from "react";
-import { BloodEligibilityBloodTypeProps } from "../../component-type/blood";
+import { BloodEligibilityBloodTypeProps } from "../../component-interfaces/blood";
 import MyButton from "../../shared/MyButton";
 import classes from "./blood.module.css";
 

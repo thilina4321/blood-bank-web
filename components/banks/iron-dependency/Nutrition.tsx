@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { Fragment, useEffect, useState } from "react";
-import { BankIronDependencyFood } from "../../../component-type/bank";
+import { BankIronDependencyFood } from "../../../component-interfaces/bank";
 import classes from "./nutrition.module.css";
 
 const richFoodsArr: BankIronDependencyFood[] = [

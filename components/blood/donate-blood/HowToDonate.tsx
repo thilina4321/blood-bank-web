@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { BloodDonateNote } from "../../../component-type/blood";
+import { BloodDonateNote } from "../../../component-interfaces/blood";
 import classes from "./howtodonate.module.css";
 
 const myNotes: BloodDonateNote[] = [
