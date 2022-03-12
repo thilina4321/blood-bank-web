@@ -16,19 +16,24 @@
 }
 
 .nav {
-  flex: 1;
+  flex: 0.3;
 }
 
 .elements {
+  flex: 0.7;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: baseline;
   list-style: none;
-  gap: 1rem;
+  /* gap: 1rem; */
   width: 100%;
   height: 100%;
   margin: 0 auto;
   color: #a3152d;
+}
+
+.hover_items{
+  padding: 0 1rem;
 }
 
 .main {
@@ -58,8 +63,9 @@
 
 .active {
   font-weight: bold;
-  border-bottom: #02afa1;
+  border-bottom: 5px solid #5e0023;
 }
+
 
 @media (max-width: 500px) {
   .header {
@@ -72,7 +78,7 @@
   display: none;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 20rem;
   position: fixed;
   top: 80px;
   left: 0;

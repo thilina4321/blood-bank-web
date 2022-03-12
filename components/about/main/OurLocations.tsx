@@ -11,6 +11,10 @@ type location = {
   location: string;
 };
 
+type Props = {
+  isTitle?: boolean;
+};
+
 const locations: location[] = [
   {
     id: 1,
@@ -64,10 +68,11 @@ const locations: location[] = [
   },
 ];
 
-const AboutOurLocations = () => {
+const AboutOurLocations: React.FC<Props> = (props) => {
+  const { isTitle = true } = props;
+
   const [location, setLocation] = useState(locations[0].location);
   const [activeNumber, setActiveNumber] = useState(1);
-
 
   const setLocationHandler = (id: number) => {
     const findLocation = locations.find((loc) => loc.id === id);
@@ -82,17 +87,18 @@ const AboutOurLocations = () => {
 
   return (
     <section className={classes.section}>
-      <h1> Our Locations </h1>
+      {isTitle && <h1> Our Locations </h1>}
 
       <div className={classes.locations}>
         <div className={classes.details}>
           {locations.map(({ id, name, number, address }) => (
             <div
-              style={{
-                backgroundColor: activeNumber === id ? "#f6f6f6" : "#fff",
-              }}
               onClick={() => setLocationHandler(id)}
-              className={classes.detail}
+              className={`${classes.detail} ${
+                activeNumber === id
+                  ? classes.hover_active
+                  : classes.hover_inactive
+              }`}
               key={id}
             >
               <p> {name} </p>

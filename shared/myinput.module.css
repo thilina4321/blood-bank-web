@@ -4,19 +4,30 @@
   align-items: flex-start;
   gap: 1rem;
   width: 100%;
-
+  margin-bottom: 1rem;
 }
 
 .input {
   width: 100%;
-  height: 2rem;
-  padding: 0.4rem;
-  border-radius: .2rem;
-  margin-bottom: 0.3rem;
+  height: 3rem;
+  padding: 0.1rem 1rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0;
+  border: 1px solid #c1a6ab;
+  font-size: 1.1rem;
 }
 
-.input:focus{
+.input:focus {
   border: none;
   text-decoration: none;
+}
+
+.textarea {
+  width: 100%;
+  padding:1rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0;
+  border: 1px solid #c1a6ab;
+  font-size: 1.1rem;
   
 }
