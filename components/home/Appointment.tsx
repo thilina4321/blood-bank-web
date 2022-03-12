@@ -5,7 +5,6 @@ import classes from "./appointment.module.css";
 
 const Appointment = () => {
   const [email, setEmail] = useState("");
-  const submitData = () => {};
   return (
     <div className={classes.section}>
       <h1> Make Appoinment Online </h1>

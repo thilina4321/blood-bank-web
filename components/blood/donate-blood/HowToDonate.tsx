@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { BloodDonateNote } from "../../../component-interfaces/blood";
 import classes from "./howtodonate.module.css";
 
-type notes = {
-  id: number;
-  note: string;
-};
-const myNotes: notes[] = [
+const myNotes: BloodDonateNote[] = [
   {
     id: 1,
     note: `Mix lean beef and leafy green vegetables in your stir fry.`,
@@ -20,7 +17,7 @@ const myNotes: notes[] = [
 ];
 
 const HowToDonate = () => {
-  const [notes, setNotes] = useState<notes[]>([]);
+  const [notes, setNotes] = useState<BloodDonateNote[]>([]);
 
   useEffect(() => {
     setNotes(myNotes);

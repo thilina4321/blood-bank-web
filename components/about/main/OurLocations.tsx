@@ -1,21 +1,11 @@
 import React, { useState } from "react";
+import {
+  AboutMainLocationProps,
+  AboutMainLocation,
+} from "../../../component-interfaces/about";
 import classes from "./ourlocations.module.css";
 
-type location = {
-  id: number;
-  number: string;
-  long: number;
-  lat: number;
-  name: string;
-  address: string;
-  location: string;
-};
-
-type Props = {
-  isTitle?: boolean;
-};
-
-const locations: location[] = [
+const locations: AboutMainLocation[] = [
   {
     id: 1,
     long: 79.97769862781902,
@@ -68,7 +58,7 @@ const locations: location[] = [
   },
 ];
 
-const AboutOurLocations: React.FC<Props> = (props) => {
+const AboutOurLocations: React.FC<AboutMainLocationProps> = (props) => {
   const { isTitle = true } = props;
 
   const [location, setLocation] = useState(locations[0].location);

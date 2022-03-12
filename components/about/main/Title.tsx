@@ -11,7 +11,7 @@ const AboutMainTitle = () => {
     <div className={classes.section}>
       <BreadCum breadCumValues={routes} />
       <div className={classes.card}>
-        <h1>Lets Make A Different Today </h1>
+        <h1> Lets Make A Different Today </h1>
         <p>{` Welcome to Lifeblood, it’s great to see you. Whether you're in the mood to save a life or browsing for info and advice, let’s find what you need.`} </p>
       </div>
     </div>

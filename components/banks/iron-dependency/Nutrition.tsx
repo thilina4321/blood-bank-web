@@ -1,13 +1,9 @@
 import Image from "next/image";
 import React, { Fragment, useEffect, useState } from "react";
+import { BankIronDependencyFood } from "../../../component-interfaces/bank";
 import classes from "./nutrition.module.css";
 
-type food = {
-  id: number;
-  note: string;
-};
-
-const richFoodsArr: food[] = [
+const richFoodsArr: BankIronDependencyFood[] = [
   {
     id: 1,
     note: `Red meat contains a lot of iron`,
@@ -28,10 +24,10 @@ const richFoodsArr: food[] = [
 ];
 
 const IronDependencyNutrition = () => {
-  const [richFoods, setRichFoods] = useState<food[]>([]);
+  const [richFoods, setRichFoods] = useState<BankIronDependencyFood[]>([]);
 
   useEffect(() => {
-      // http request
+    // http request
     setRichFoods(richFoodsArr);
   }, []);
 
