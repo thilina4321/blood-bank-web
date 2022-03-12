@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section h1 {
+  font-size: 3rem;
+  color: #5e2300;
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #f6f6f6;
+  padding: 5rem;
+}
+
+@media (max-width: 800px) {
+  .form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .section h1{
+      font-size: 2rem;
+      margin-left: 1rem;
+  }
+
+  .section {
+    padding: 0.2rem;
+    align-items: flex-start;
+
+}
+}

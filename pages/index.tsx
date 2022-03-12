@@ -3,6 +3,7 @@ import Appointment from "../components/home/Appointment";
 import BloodDetails from "../components/home/BloodDetails";
 import Brand from "../components/home/Brand";
 import HomeFaq from "../components/home/Faq";
+import FindLocation from "../components/home/FindLocation";
 import HomeInformation from "../components/home/Information";
 import Locations from "../components/home/Locations";
 import HomeYouMayLike from "../components/home/YouMayLike";
@@ -34,7 +35,8 @@ export default function Home() {
       <HomeFaq />
       <HomeYouMayLike />
       <Appointment />
-      <Locations locations={locations} />
+      <FindLocation />
+      {/* <Locations locations={locations} /> */}
     </div>
   );
 }

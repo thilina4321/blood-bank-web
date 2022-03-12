@@ -12,6 +12,8 @@
   .section h1, .section li {
     color: #5f2300;
     font-size: 3rem;
+    margin: 0;
+    margin-top: 1rem;
   }
   
   .section ul{
@@ -20,7 +22,7 @@
 
   .section li{
       text-align: start;
-      font-size: 1rem;
+      font-size: 1.2rem;
       margin: 0.3rem;
   }
   
@@ -39,4 +41,23 @@
         align-items: flex-start;
 
     }
+  }
+
+  .ways{
+      width: 60%;
+      margin: 1rem auto;
+  }
+
+  .way{
+      border-bottom: 1px solid #eee;
+      padding: 0.5rem;
+      width: 100%;
+      cursor: pointer;
+  }
+
+  @media(max-width:800px){
+      .ways{
+          width: 96%;
+          margin: 1rem auto;
+      }
   }
