@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useHttp from "../../../hooks/useHttp";
 
 const DoctorsNotes = () => {
-  const notes = [
-    {
-      id: 1,
-      name: "Thilina Dilshan",
-      note: "Donations can save people",
-      position: "Specialist",
+  const [notes, setNotes] = useState([]);
+
+  const getDoctorNotesReq = useHttp({
+    url: "/blood-bank/doctors-notes",
+    method: "get",
+    onSucsses: (data: any) => {
+      setNotes(data);
     },
-    {
-      id: 2,
-      name: "Kamal Kamal",
-      note: "Donations is good thing",
-      position: "versatilist",
-    },
-  ];
+  });
+
+  useEffect(() => {
+    getDoctorNotesReq();
+  }, []);
+
   return (
     <div className="container">
       <h1> {`Doctor's Notes`} </h1>
