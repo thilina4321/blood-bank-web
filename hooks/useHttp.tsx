@@ -22,11 +22,12 @@ const useHttp = (details: data) => {
 
       onSucsses(response.data.data);
 
-    //   return { data: response.data };
-    return
+      return { data: response.data };
     } catch (err) {
       // global.showAlert(err.response.data.errors);
       //   global.showAlert([]);
+      console.log(err);
+      
       setError(true);
       return { error: true };
     }

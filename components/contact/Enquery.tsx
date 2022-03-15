@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useHttp from "../../hooks/useHttp";
 import MyButton from "../../shared/MyButton";
 import MyInput from "../../shared/MyInput";
 import classes from "./enquery.module.css";
@@ -8,6 +9,25 @@ const Enquery = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+
+  const submitQueryReq = useHttp({
+    url: "/contact-query",
+    method: "post",
+    body: { email, fullName, message, phoneNumber },
+    onSucsses: (data: any) => {},
+  });
+
+  const submitHandler = async () => {
+    const { data, error } = await submitQueryReq();
+    if (data.success) {
+      // semantic UI success
+    }
+
+    setEmail("");
+    setPhoneNumber("");
+    setMessage("");
+    setFullName("");
+  };
 
   return (
     <section className={classes.section}>
@@ -26,7 +46,7 @@ const Enquery = () => {
           label="Message"
           isTextArea={true}
         />
-        <MyButton name="Submit Query" />
+        <MyButton clickHandler={submitHandler} name="Submit Query" />
       </form>
     </section>
   );

@@ -1,14 +1,17 @@
-import React from 'react'
-import classes from './button.module.css'
+import React from "react";
+import classes from "./button.module.css";
 
 type props = {
-  name:string
-}
-const MyButton:React.FC<props> = (props) => {
-  const {name} = props
+  name: string;
+  clickHandler?: any;
+};
+const MyButton: React.FC<props> = (props) => {
+  const { name, clickHandler } = props;
   return (
-    <button className={classes.btn}>{name}</button>
-  )
-}
+    <button type="button" onClick={clickHandler} className={classes.btn}>
+      {name}
+    </button>
+  );
+};
 
-export default MyButton
+export default MyButton;
