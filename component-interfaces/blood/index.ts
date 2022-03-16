@@ -1,6 +1,6 @@
 export interface BloodDonateNote {
-  id: number;
-  note: string;
+  _id: number;
+  title: string;
 }
 
 export interface BloodEligibilityBloodTypeProps {
@@ -20,4 +20,10 @@ export interface BloodEligibilityKnowMoreInterface {
   image: string;
   title: string;
   des: string;
+}
+
+
+export interface BloodDonateBloodTitleInterface {
+  title: string;
+  description: string;
 }

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type data = {
   url: string;
-  method: any;
+  method: "get" | "delete" | "put" | "patch" | "delete";
   body?: any;
   onSucsses?: any;
 };
@@ -27,7 +27,7 @@ const useHttp = (details: data) => {
       // global.showAlert(err.response.data.errors);
       //   global.showAlert([]);
       console.log(err);
-      
+
       setError(true);
       return { error: true };
     }
