@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { ContactOptionsInterface } from "../../component-interfaces/contact";
 import classes from "./ways.module.css";
 
 const ways = [
@@ -7,8 +8,15 @@ const ways = [
   { id: 3, way: "Fax", value: "+94 76 555 44 33" },
 ];
 
-const Ways = () => {
+const Ways : React.FC<ContactOptionsInterface> = (props) => {
   const [selectNumber, setSelectNumber] = useState(1);
+
+  const {email, fax, phoneNumber} = props
+
+  ways[0].value = email
+  ways[1].value = phoneNumber
+  ways[2].value = fax
+
 
   return (
     <section className={classes.section}>

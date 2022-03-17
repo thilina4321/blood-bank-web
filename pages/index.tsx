@@ -1,12 +1,13 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import { HomeInformationInterface } from "../component-interfaces/home";
 import Appointment from "../components/home/Appointment";
-import BloodDetails from "../components/home/BloodDetails";
 import Brand from "../components/home/Brand";
 import HomeFaq from "../components/home/Faq";
 import FindLocation from "../components/home/FindLocation";
 import HomeInformation from "../components/home/Information";
-import Locations from "../components/home/Locations";
 import HomeYouMayLike from "../components/home/YouMayLike";
+import useHttp from "../hooks/useHttp";
 
 const details: { title: string; shortDescription: string }[] = [
   { title: "Title 1", shortDescription: "This is the des 1" },
@@ -23,6 +24,21 @@ const locations: { district: string; province: string; city: string }[] = [
 ];
 
 export default function Home() {
+  const [information, setInformation] = useState<HomeInformationInterface[]>(
+    []
+  );
+
+  const informationReq = useHttp({
+    url: "/home-information",
+    method: "get",
+    onSucsses: (data: HomeInformationInterface[]) => {
+      setInformation(data)
+    },
+  });
+
+  useEffect(()=>{
+    informationReq()
+  }, [])
 
   return (
     <div>
@@ -31,7 +47,7 @@ export default function Home() {
       </Head>
       <Brand />
       {/* <BloodDetails bloodDetails={details} /> */}
-      <HomeInformation />
+      <HomeInformation informations={information} />
       <HomeFaq />
       <HomeYouMayLike />
       <Appointment />
