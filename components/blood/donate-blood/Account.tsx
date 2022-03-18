@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import MyButton from "../../../shared/MyButton";
 import MyInput from "../../../shared/MyInput";
 import classes from "./account.module.css";
@@ -58,21 +58,68 @@ const DonatorAccount = () => {
 
 export default DonatorAccount;
 
+
 const BookingDetails = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
+    const [fullName, setFullName] = useState("name");
+    const [email, setEmail] = useState("email");
+    const [id, setId] = useState("iwindmdm");
+    const [day, setDay] = useState("");
+    const [dayAsString, setDayAsString] = useState("");
+    const [time, setTime] = useState("12-5");
+    const [step, setStep] = useState<number>(0);
+    const [error, setError] = useState("");
+  
+    useEffect(() => {
+      if (day) {
+        const selectDate = new Date(day).getTime();
+        const currentDate = Date.now();
+  
+        if (selectDate < currentDate) {
+          setError("*Please select a valid date");
+          return;
+        }
+  
+        setError("");
+        setStep(1);
+        const myDate = new Date(day).toString();
+        setDayAsString(myDate);
+      }
+    }, [day]);
+  
+    console.log("logging", day);
+  
+    const submitHandler = () => {};
+    return (
+      <section className={classes.form}>
+        {step === 0 && <h2> Start Your Day Picking </h2>}
+        {error && <p style={{ color: "red" }}> {error} </p>}
+        {step === 0 && (
+          <MyInput
+            type="date"
+            value={day}
+            setValue={setDay}
+            label="Please Select A Day"
+          />
+        )}
+  
+        {step === 1 && (
+          <Fragment>
+            <h2> Hey {fullName}, Thanks for your interest </h2>
+            <h4>
+              We are available in, {time} on {dayAsString}
+            </h4>
+            <MyInput value={fullName} setValue={setFullName} label="Full Name" />
+            <MyInput value={email} setValue={setEmail} label="Your Email" />
+            <MyInput value={id} setValue={setId} label="Your Id" />
+            <MyButton clickHandler={submitHandler} name="Book Now" />
+            <div style={{ height: "2rem" }}></div>
+            <MyButton clickHandler={() => setStep(0)} name="Reselect Date" />
+          </Fragment>
+        )}
+      </section>
+    );
+  };
 
-  const submitHandler = () => {};
-  return (
-    <section className={classes.form}>
-      <MyInput value={fullName} setValue={setFullName} label="Full Name" />
-      <MyInput type="date" value={email} setValue={setEmail} label="Date" />
-      <MyInput type="time" value={email} setValue={setEmail} label="Time" />
-
-      <MyButton clickHandler={submitHandler} name="Edit Details" />
-    </section>
-  );
-};
 
 const AccountDetails = () => {
   const [fullName, setFullName] = useState("");
