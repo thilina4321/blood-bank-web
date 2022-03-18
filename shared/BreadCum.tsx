@@ -6,6 +6,7 @@ type Props = {
   color?:string
   bgColor?:string
 };
+
 const BreadCum: React.FC<Props> = (props) => {
   const { breadCumValues, color = '#000', bgColor = '#F6F6F6' } = props;
   
