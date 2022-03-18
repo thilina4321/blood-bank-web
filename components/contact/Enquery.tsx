@@ -9,6 +9,7 @@ const Enquery = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const submitQueryReq = useHttp({
     url: "/contact-query",
@@ -18,8 +19,13 @@ const Enquery = () => {
   });
 
   const submitHandler = async () => {
+    if (!email || !phoneNumber || !message || !fullName) {
+      setError("*Please provide all the details");
+      return;
+    }
+    setError("");
     const { data, error } = await submitQueryReq();
-    if (data.success) {
+    if (data && data.success) {
       // semantic UI success
     }
 
@@ -47,6 +53,7 @@ const Enquery = () => {
           isTextArea={true}
         />
         <MyButton clickHandler={submitHandler} name="Submit Query" />
+        {error && <p style={{ color: "red" }}> {error} </p>}
       </form>
     </section>
   );

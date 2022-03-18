@@ -3,6 +3,18 @@ export interface HomeBloodDetailsProps {
 }
 
 export interface HomeLocationProps {
-    locations: { district: string; province: string; city: string }[];
+  locations: { district: string; province: string; city: string }[];
+}
 
+export interface HomeInformationInterface {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+export interface HomeFaqInterface {
+  id: string;
+  question: string;
+  answer: string;
 }

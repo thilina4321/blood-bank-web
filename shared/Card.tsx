@@ -2,12 +2,12 @@ import React from "react";
 import classes from "./card.module.css";
 
 type Props = {
-  image: string;
+  image?: string;
   title: string;
   description: string;
   width?: number;
   bgColor?: boolean;
-  onNavigate?: (title: string)=> void
+  onNavigate?: (title: string) => void;
 };
 
 const CardUIComponent: React.FC<Props> = (props) => {
@@ -23,13 +23,15 @@ const CardUIComponent: React.FC<Props> = (props) => {
       style={style}
       onClick={() => onNavigate && onNavigate(title)}
     >
-      <img
-        className={classes.image}
-        src={image}
-        alt={title}
-        width={200}
-        height={250}
-      />
+      {image && (
+        <img
+          className={classes.image}
+          src={image}
+          alt={title}
+          width={200}
+          height={250}
+        />
+      )}
       <div style={{ padding: "1rem" }}>
         <h1> {title} </h1>
         <p> {description} </p>
