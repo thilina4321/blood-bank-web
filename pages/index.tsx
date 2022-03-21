@@ -49,6 +49,8 @@ export default function Home() {
     },
   });
 
+  
+
   useEffect(() => {
     informationReq();
     faqReq();
@@ -63,7 +65,7 @@ export default function Home() {
       <HomeInformation informations={information} />
       <HomeFaq faqs={faqs} />
       <HomeYouMayLike />
-      <Appointment />
+      {/* <Appointment /> */}
       <FindLocation />
     </div>
   );

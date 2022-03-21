@@ -18,3 +18,4 @@ export interface HomeFaqInterface {
   question: string;
   answer: string;
 }
+
