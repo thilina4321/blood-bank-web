@@ -1,0 +1,27 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+.section h1{
+    color: #5e2300;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+}
+
+.section p {
+    margin: 0;
+}
+
+
+@media (max-width:500px){
+    .section h1{
+        font-size: 2rem;
+    }
+    
+}

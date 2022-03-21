@@ -36,16 +36,16 @@ const Footer = () => {
     setFotterTypes(fotterTypeArr);
   }, [fotter]);
 
-
   return (
     <footer className={classes.footer}>
       <div className={classes.footer}>
-        {fotterTypes.map((type, index) => (
+        {fotterTypes.map((mainType, index) => (
           <div className={classes.general} key={index}>
-            <h4> {type} </h4>
-            {fotter.map(({ id, title }) => (
-              <p key={id}> {title} </p>
-            ))}
+            <h4> {mainType && mainType.toUpperCase()} </h4>
+            {fotter.map(
+              ({ id, title, type }) =>
+                type === mainType && <p key={id}> {title} </p>
+            )}
           </div>
         ))}
       </div>

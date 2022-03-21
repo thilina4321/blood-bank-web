@@ -1,0 +1,59 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 5rem;
+  background-color: #f6f6f6;
+  padding: 2rem;
+}
+
+.section h1 {
+  color: #5e2300;
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+
+.section p {
+  margin: 0;
+}
+
+.bloods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.blood {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 300px;
+}
+
+.blood h3 {
+  padding: 2rem;
+  text-align: center;
+  background-color: #ff0000;
+  color: white;
+  font-weight: blod;
+  border-radius: 50%;
+}
+
+@media (max-width: 500px) {
+  .section h1 {
+    font-size: 2rem;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+  }
+
+  .blood{
+      align-items: flex-start;
+  }
+}
