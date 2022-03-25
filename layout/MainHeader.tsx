@@ -35,22 +35,17 @@ const MainHeader: React.FC<props> = (props) => {
                 {nvE.name}
               </a>
             </Link>
-            <div className={classes.menu_items}>
-              {nvE.subElement.map((n, i) => (
-                <Fragment key={i}>
-                  <Link href={n.subPath}>
-                    <a
-
-                    // className={`${
-                    //   router.pathname == nvE.path ? classes.active : ""
-                    // } ${classes.hover_items}`}
-                    >
-                      {n.subName}
-                    </a>
-                  </Link>
-                </Fragment>
-              ))}
-            </div>
+            {nvE.subElement.length > 0 && (
+              <div className={classes.menu_items}>
+                {nvE.subElement.map((n, i) => (
+                  <Fragment key={i}>
+                    <Link href={n.subPath}>
+                      <a>{n.subName}</a>
+                    </Link>
+                  </Fragment>
+                ))}
+              </div>
+            )}
           </Fragment>
         ))}
       </ul>
