@@ -4,6 +4,7 @@ import {
   AboutMainLocation,
 } from "../../../component-interfaces/about";
 import classes from "./ourlocations.module.css";
+import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 
 const locations: AboutMainLocation[] = [
   {
@@ -77,6 +78,10 @@ const AboutOurLocations: React.FC<AboutMainLocationProps> = (props) => {
 
   return (
     <section className={classes.section}>
+      <h1>
+        <AddLocationAltIcon fontSize="large" />
+      </h1>
+
       {isTitle && <h1> Our Locations </h1>}
 
       <div className={classes.locations}>

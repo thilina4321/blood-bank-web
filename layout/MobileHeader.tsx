@@ -2,6 +2,7 @@ import Link from "next/link";
 import { NextRouter } from "next/router";
 import React, { Fragment, useState } from "react";
 import classes from "./mobile.module.css";
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 type props = {
   navElementName: { path: string; name: string }[];
@@ -23,7 +24,7 @@ const Slider: React.FC<props> = (props) => {
         onClick={toggleSlider}
         className={!second ? classes.nav : classes.se__nav}
       >
-        {second ? "Brand" : "X"}
+        {second ? <MenuOpenIcon /> : "X"}
       </nav>
       {!second && (
         <ul className={classes.elements}>
