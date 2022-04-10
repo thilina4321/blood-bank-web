@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 import classes from "./main.module.css";
 import Link from "next/link";
 import { NextRouter } from "next/router";
+import VaccinesIcon from '@mui/icons-material/Vaccines';
 
 type props = {
   navElementName: {
@@ -21,7 +22,11 @@ const MainHeader: React.FC<props> = (props) => {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <Link href={"/"}>Brand</Link>
+        <Link href={"/"}>
+          <a>
+            <VaccinesIcon /> SLBB
+          </a>
+        </Link>
       </nav>
       <ul className={classes.elements}>
         {navElementName.map((nvE, ind) => (
@@ -35,22 +40,17 @@ const MainHeader: React.FC<props> = (props) => {
                 {nvE.name}
               </a>
             </Link>
-            <div className={classes.menu_items}>
-              {nvE.subElement.map((n, i) => (
-                <Fragment key={i}>
-                  <Link href={n.subPath}>
-                    <a
-
-                    // className={`${
-                    //   router.pathname == nvE.path ? classes.active : ""
-                    // } ${classes.hover_items}`}
-                    >
-                      {n.subName}
-                    </a>
-                  </Link>
-                </Fragment>
-              ))}
-            </div>
+            {nvE.subElement.length > 0 && (
+              <div className={classes.menu_items}>
+                {nvE.subElement.map((n, i) => (
+                  <Fragment key={i}>
+                    <Link href={n.subPath}>
+                      <a>{n.subName}</a>
+                    </Link>
+                  </Fragment>
+                ))}
+              </div>
+            )}
           </Fragment>
         ))}
       </ul>

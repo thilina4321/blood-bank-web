@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type data = {
   url: string;
-  method: "get" | "delete" | "put" | "patch" | "delete";
+  method: "get" | "delete" | "put" | "post" | "delete";
   body?: any;
   onSucsses?: any;
 };

@@ -1,25 +1,56 @@
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import useHttp from "../../hooks/useHttp";
 import classes from "./youmaylike.module.css";
 
-const likes = [
-  { id: 1, title: "Title 1", des: "Description 1" },
-  { id: 2, title: "Title 2", des: "Description 1" },
-  { id: 3, title: "Title 3", des: "Description 1" },
-];
+interface YouMayLikeCom {
+  title: string;
+  imageUrl: string;
+  items: {
+    _id: string;
+    title: string;
+    description: string;
+    imageUrl: string;
+  }[];
+  id: string;
+}
 
 const HomeYouMayLike = () => {
+  const [youMayLike, setYouMayLike] = useState<YouMayLikeCom>();
+  const router = useRouter();
+
+  const youMayLikeReq = useHttp({
+    url: "/you-may-like",
+    method: "get",
+    onSucsses: (data: YouMayLikeCom[]) => {
+      setYouMayLike(data[0]);
+    },
+  });
+
+  useEffect(() => {
+    youMayLikeReq();
+  }, []);
+
+  const onNavHandler = (title: string) => {
+    router.push(`/home/you-may-like/${title}`);
+  };
+
   return (
     <section className={classes.section}>
       <div className={classes.sub__section}>
-        <img src={"/research.jpeg"} alt={"You may like"} />
+        <img src={youMayLike?.imageUrl} alt={"You may like"} />
       </div>
       <div className={classes.sub__section}>
-        <h1> You May Like ? </h1>
+        <h1> {youMayLike?.title} </h1>
         <div className={classes.likes}>
-          {likes.map(({ id, title, des }) => (
-            <div key={id} className={classes.like}>
+          {youMayLike?.items.map(({ _id, title, description }) => (
+            <div
+              onClick={() => onNavHandler(title)}
+              key={_id}
+              className={classes.like}
+            >
               <h2> {title} </h2>
-              <p> {des} </p>
+              <p> {description} </p>
             </div>
           ))}
         </div>
