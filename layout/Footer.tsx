@@ -11,6 +11,32 @@ const Footer = () => {
     url: "/fotter",
     method: "get",
     onSucsses: (data: FotterInterface[]) => {
+      data = [
+        {
+          title: "Blood",
+          url: "/resource",
+          type: "general",
+          id: "62374d09693dcb76aea1682a",
+        },
+        {
+          title: "Donators",
+          url: "/commerce",
+          type: "more",
+          id: "62374e87693dcb76aea1682f",
+        },
+        // {
+        //   title: "Organ and Tissues",
+        //   url: "/resource",
+        //   type: "general",
+        //   id: "62374d09693dcb76aea1682l",
+        // },
+        // {
+        //   title: "Patients",
+        //   url: "/commerce",
+        //   type: "more",
+        //   id: "62374e87693dcb76aea1682k",
+        // },
+      ];
       setFotter(data);
     },
   });
@@ -49,6 +75,16 @@ const Footer = () => {
           </div>
         ))}
       </div>
+      <div>
+        {`Blood bank system web site is more for the donator and the normal people 
+        to get the more and more idea.
+`}
+      </div>
+      <div style={{ height: "30px" }}></div>
+      <div style={{marginTop:'30px'}}>{`
+ 
+
+ ©2022 Blood Bank System`}</div>
     </footer>
   );
 };

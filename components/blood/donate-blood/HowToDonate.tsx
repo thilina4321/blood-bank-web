@@ -30,7 +30,7 @@ const HowToDonate: React.FC<{ myNotes: BloodDonateNote[] }> = (props) => {
         <Image src={"/git.png"} height={100} width={100} alt={"title"} />
       </div>
       <div className={classes.notes}>
-        <h1>How do I donate?</h1>
+        <h1>Things You can do .</h1>
         {notes.map((note, index) => (
           <div key={note._id} className={classes.note}>
             <h1> {index + 1} </h1>
