@@ -6,33 +6,31 @@ import classes from "./program.module.css";
 const programs = [
   {
     id: 1,
-    title: "Title 1",
-    description:
-      "We investigate the best ways to recruit, motivate and keep donors. 1",
+    title: "Donator Behaviour",
+    description: `We investigate the best ways to recruit, motivate and keep donors.`,
   },
   {
     id: 2,
-    title: "Title 2",
-    description:
-      "We investigate the best ways to recruit, motivate and keep donors. 2",
+    title: "Donor health and wellbeing",
+    description: `
+      Keeping our donors happy and healthy is really important to us.`,
   },
   {
     id: 3,
-    title: "Title 3",
-    description:
-      "We investigate the best ways to recruit, motivate and keep donors. 3",
+    title: "Product development and storage",
+    description: `
+      What happens to your donation when it leaves the donor centre?`,
   },
   {
     id: 4,
     title: "Title 4",
-    description:
-      "We investigate the best ways to recruit, motivate and keep donors. 3",
+    description: `We investigate the best ways to recruit, motivate and keep donors. `,
   },
   {
     id: 5,
-    title: "Title 5",
-    description:
-      "We investigate the best ways to recruit, motivate and keep donors. 3",
+    title: "Product safety",
+    description: `
+      Australia has one of the safest blood supplies in the world.`,
   },
 ];
 

@@ -14,27 +14,21 @@ type detail = {
 const informations : BloodEligibilityKnowMoreInterface[] = [
   {
     id: "1",
-    image: "/research.jpeg",
-    title: "Title 1",
-    des: "this is the description",
+    image: "/eli_faq.png",
+    title: "Frequently asked questions",
+    des: `Browse through frequently asked questions, like how donation is affected by medication, tattoos, travel, and more.`,
+  },
+  {
+    id: "2",
+    image: "/eli_con.png",
+    title: "Contact Us",
+    des: `Couldn’t find what you were looking for in our FAQs? That’s OK — our team can help. Just get in touch.`,
   },
   {
     id: "2",
     image: "/research.jpeg",
-    title: "Title 2",
-    des: "this is the description",
-  },
-  {
-    id: "3",
-    image: "/research.jpeg",
-    title: "Title 3",
-    des: "this is the description",
-  },
-  {
-    id: "4",
-    image: "/research.jpeg",
-    title: "Title 3",
-    des: "this is the description",
+    title: "Learn More",
+    des: `If you want to learn more about the eligibility. Please contact with our doctor.`,
   },
 ];
 

@@ -18,7 +18,7 @@ const DonatorAccount = () => {
     { id: "2", time: "12.30", date: "12 th 2020 Nov", place: "colombo" },
   ]);
   const [upDon, setUpDon] = useState<prevDonations[]>([
-    { id: "1", time: "12.30", date: "12 th 2020 Nov", place: "kelaniya" },
+    { id: "1", time: "12.30 pm", date: "12 th 2022 Nov", place: "kelaniya" },
     { id: "2", time: "12.30", date: "12 th 2020 Nov", place: "kelaniya" },
   ]);
 
@@ -32,7 +32,7 @@ const DonatorAccount = () => {
         className={classes.img}
         height={200}
         width={200}
-        src="/research.jpeg"
+        src="/person.jpeg"
         alt="user"
       />
 
