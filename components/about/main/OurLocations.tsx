@@ -49,6 +49,9 @@ const locations: AboutMainLocation[] = [
   }
 ];
 
+console.log("log");
+
+
 const AboutOurLocations: React.FC<AboutMainLocationProps> = (props) => {
   const { isTitle = true } = props;
 
