@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import { navElementName } from "../routes/routes";
 const Layout: React.FC = ({ children }) => {
   const router = useRouter();
-  console.log('worlds');
+  console.log('world');
   
 
   return (
