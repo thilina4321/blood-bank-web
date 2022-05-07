@@ -50,6 +50,7 @@ const locations: AboutMainLocation[] = [
 ];
 
 console.log("log");
+console.log("log 1");
 
 
 const AboutOurLocations: React.FC<AboutMainLocationProps> = (props) => {

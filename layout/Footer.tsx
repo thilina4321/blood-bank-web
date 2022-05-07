@@ -80,6 +80,7 @@ const Footer = () => {
         to get the more and more idea.
 `}
       </div>
+      <h1>hells</h1>
       <div style={{ height: "30px" }}></div>
       <div style={{marginTop:'30px'}}>{`
  

@@ -18,6 +18,8 @@ const MainHeader: React.FC<props> = (props) => {
   const { navElementName, router } = props;
 
   const routePath = router.pathname.replace("/", "").split("/")[0];
+  console.log('hello');
+  
 
   return (
     <header className={classes.header}>
