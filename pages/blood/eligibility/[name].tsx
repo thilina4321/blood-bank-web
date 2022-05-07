@@ -1,25 +1,50 @@
 import { GetStaticProps } from "next";
-import React from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import React, { Fragment, useEffect, useState } from "react";
+import {eligibility} from '../../../data/eligibility'
 
 const SpecificEligibilityDetail = () => {
+  const {query} = useRouter()
+  const [eli, setEli] = useState<any>(null)
+  const router = useRouter()
+
+  useEffect(()=>{
+    if(query.name){
+      if(query.name === 'Contact Us'){
+        router.push('/contact')
+        return
+      }
+      if(query.name === 'Learn More'){
+        router.push('/blood/learn-about-blood')
+        return
+      }
+    let index = eligibility.findIndex((e:any)=> e.title = query.name)
+    const data = eligibility[index];
+    console.log(data);
+    setEli(data)
+    }
+  }, [query])
+  
   return (
-    <section className="container">
-      <h1> Title </h1>
-      <img src="/research.jpeg" alt="title" width={200} height={200} />
+    <Fragment>
+      <Head>
+        <title> {eli && eli.title} </title>
+      </Head>
+   { eli && <section className="container">
+      <h1> {eli.title} </h1>
+      <img src={eli.image} alt={eli.title} width={200} height={200} />
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ad placeat
-        saepe inventore error assumenda soluta fugiat debitis in nemo
-        exercitationem sequi blanditiis reiciendis molestiae, dolorum vero iusto
-        incidunt voluptatibus! Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Est ad placeat saepe inventore error assumenda soluta
-        fugiat debitis in nemo exercitationem sequi blanditiis reiciendis
-        molestiae, dolorum vero iusto incidunt voluptatibus! Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Est ad placeat saepe inventore
-        error assumenda soluta fugiat debitis in nemo exercitationem sequi
-        blanditiis reiciendis molestiae, dolorum vero iusto incidunt
-        voluptatibus!
+        {eli.des}
       </p>
-    </section>
+      {eli.title === "Frequently Asked Questions" && <div>
+        {eli.items.map((it:any)=> <div key={it.id}>
+          <h2> {it.q} </h2>
+          <p> {it.a} </p>
+           </div>)}
+        </div>}
+    </section>}
+    </Fragment>
   );
 };
 
