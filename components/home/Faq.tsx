@@ -12,7 +12,7 @@ const HomeFaq: React.FC<{ faqs: HomeFaqInterface[] }> = (props) => {
       <div className={classes.questions}>
         {questions.map(({ id, question }) => (
           <div
-            onClick={() => router.push("/home/faq/" + question)}
+            onClick={() => router.push("/home/faq/" + id)}
             className={classes.question}
             key={id}
           >

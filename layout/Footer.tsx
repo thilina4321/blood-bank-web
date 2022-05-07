@@ -42,7 +42,7 @@ const Footer = () => {
   });
 
   useEffect(() => {
-    fotterReq();
+    // fotterReq();
   }, []);
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <div className={classes.footer}>
+      {/* <div className={classes.footer}>
         {fotterTypes.map((mainType, index) => (
           <div className={classes.general} key={index}>
             <h4> {mainType && mainType.toUpperCase()} </h4>
@@ -74,7 +74,7 @@ const Footer = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
       <div>
         {`Blood bank system web site is more for the donator and the normal people 
         to get the more and more idea.
