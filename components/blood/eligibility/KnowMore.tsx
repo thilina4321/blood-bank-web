@@ -5,7 +5,7 @@ import CardUIComponent from "../../../shared/Card";
 import classes from "./knowmore.module.css";
 
 const EligibilityKnowMore: React.FC<{
-  informations: BloodEligibilityKnowMoreInterface[];
+  informations: any[];
 }> = (props) => {
   const { informations } = props;
 

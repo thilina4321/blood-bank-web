@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import useHttp from "../../../hooks/useHttp";
-
+import {youmaylikedata} from '../../../data/youmaylike'
 interface YouMayLikeSingle {
   title: string;
   _id: string;
@@ -26,7 +26,9 @@ const SpecificYouMayLike: React.FC<{ params: string }> = (props) => {
 
   useEffect(() => {
     if (params) {
-      faqReauest();
+      // faqReauest();
+      const data = youmaylikedata.find(like => like._id === params)
+      setYouMayLike(data)
     }
   }, [params]);
 

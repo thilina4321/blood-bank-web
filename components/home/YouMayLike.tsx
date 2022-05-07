@@ -72,7 +72,7 @@ const HomeYouMayLike = () => {
         <div className={classes.likes}>
           {youMayLike?.items.map(({ _id, title, description }) => (
             <div
-              onClick={() => onNavHandler(title)}
+              onClick={() => onNavHandler(_id)}
               key={_id}
               className={classes.like}
             >

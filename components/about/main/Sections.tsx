@@ -32,6 +32,8 @@ const informations = [
 
 const AboutMainSections = () => {
   const router = useRouter();
+  console.log("hello");
+  
 
   const onNavigateHandler: (title: string) => void = (title: string) => {
     router.push(`/`);
