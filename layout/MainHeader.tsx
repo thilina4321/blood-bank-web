@@ -56,6 +56,7 @@ const MainHeader: React.FC<props> = (props) => {
           </Fragment>
         ))}
       </ul>
+      <div style={{cursor:"pointer"}} onClick={()=>router.push('/portal')}> PORTAL </div>
     </header>
   );
 };

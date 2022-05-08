@@ -6,15 +6,15 @@ export const navElementName = [
       { subName: "Eligibility", subPath: "/blood/eligibility" },
       { subName: "Learn About Blood", subPath: "/blood/learn-about-blood" },
       { subName: "Donate Blood", subPath: "/blood/donate-blood" },
-      { subName: "Find Blood Center", subPath: "/blood/find-blood-center" },
+      { subName: "Find Blood Center", subPath: "/location" },
     ],
   },
   {
     name: "About",
     path: "/about",
     subElement: [
-      { subName: "Doctor Notes", subPath: "/about/doctors-notes" },
-      { subName: "Our Research", subPath: "/about/research" },
+      // { subName: "Doctor Notes", subPath: "/about/doctors-notes" },
+      { subName: "Our Research Strategy", subPath: "/about/research" },
       { subName: "Our Programs", subPath: "/about/our-programs" },
     ],
   },
