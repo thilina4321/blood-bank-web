@@ -11,12 +11,12 @@ const OurProgramsTitle = () => {
   return (
     <div className={classes.section}>
       <BreadCum breadCumValues={routes} />
-      <CardUIComponent
+      {/* <CardUIComponent
         width={30}
         title="Our Programs"
         image="/git.png"
         description={`There's a lot more to blood donation than you might expect — and we research every part of it. `}
-      />
+      /> */}
     </div>
   );
 };

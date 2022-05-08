@@ -73,7 +73,7 @@ const AboutOurLocations: React.FC<AboutMainLocationProps> = (props) => {
   return (
     <section className={classes.section}>
       <h1>
-        <AddLocationAltIcon fontSize="large" />
+        <AddLocationAltIcon fontSize="large" /> Blood Centers
       </h1>
 
       {isTitle && <h1> Our Locations </h1>}

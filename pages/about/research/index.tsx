@@ -12,7 +12,7 @@ const Research = () => {
       </Head>
       <ResearchTitle />
       <TrendingResearch />
-      <ResearchWhatWedo />
+      {/* <ResearchWhatWedo /> */}
     </Fragment>
   );
 };
